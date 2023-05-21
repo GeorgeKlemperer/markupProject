@@ -1,0 +1,153 @@
+* {
+   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000000;
+}
+
+#header {
+   
+    padding: 0.5rem;
+    background-color: #000000
+}
+
+#primary-navigaiton {
+    max-width: 60rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#logo {
+ font-size: 2rem;
+ color:#ffffff;
+}
+
+.primary-nav-section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.primary-nav-list {
+list-style: none;
+}
+
+.primary-nav-link{
+ font-size: 1.5rem;
+ color:#ffffff;
+ text-decoration: none;
+}
+
+.primary-nav-link:hover{
+    text-decoration:underline;
+}
+
+#main-jumbotron{
+    position: relative;
+   
+
+}
+
+#main-image {
+  width: 100vw;
+  height: 100vh;
+  filter: brightness(40%);
+}
+
+#main-text{
+    
+    width: 40rem;
+    height: 15rem;
+    position: absolute;
+    top: 20%;
+    left:50%;
+    transform: translate(-50%, 0);
+
+}
+
+#main-text h1{
+    font-size: 4rem;
+    text-align: center;
+    color:#fa823f;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#main-content{
+    
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+
+
+#about-us{
+    height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+#about-us-text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:center;
+    padding: 1rem;
+    width: 50%;
+}
+
+#about-us-text h1{
+   color: #ffffff;
+    font-size: 3rem;
+}
+
+#about-us-text > * + * {
+    margin-top: 2rem;
+  }
+
+#about-us-text p{
+    color: #ffffff;
+    font-size: 1.4rem;
+   
+}
+
+
+#about-us-image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    width: 50%;
+}
+
+#about-us-image img{
+   
+    width: 100%;
+}
+
+#booking-btn{
+    width: 50%;
+    background-color: #fa823f;
+   
+    padding: 1rem;
+    border: none;
+}
+
+#booking-btn a {
+   
+    text-decoration: none;
+    color:#ffffff;
+}
+
+
