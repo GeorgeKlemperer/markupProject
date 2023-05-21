@@ -150,4 +150,15 @@ list-style: none;
     color:#ffffff;
 }
 
+.center {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+footer {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
