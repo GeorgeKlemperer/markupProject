@@ -1,5 +1,4 @@
 * {
-   
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,8 +9,7 @@ body{
 }
 
 #header {
-   
-    padding: 0.5rem;
+    padding: 1.3rem;
     background-color: #000000
 }
 
@@ -23,7 +21,6 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-
 }
 
 #logo {
@@ -52,10 +49,36 @@ list-style: none;
     text-decoration:underline;
 }
 
+#toggle-menu{
+    display: none;
+}
+
+
+.toogle-nav-section{
+   height: 1px;
+   transition: height 1s;
+}
+
+.toogle-nav-section ul > * + * {
+    margin-top: 1rem;
+}
+
+.toggle-nav-list{
+  text-align: center;
+}
+
+.toggle-nav-list a{ 
+ text-decoration: none;
+ color: #ffffff;
+ font-size:2rem;
+}
+
+.toggle-nav-list a:hover{
+    text-decoration: underline;
+}
+
 #main-jumbotron{
     position: relative;
-   
-
 }
 
 #main-image {
@@ -65,14 +88,12 @@ list-style: none;
 }
 
 #main-text{
-    
     width: 40rem;
     height: 15rem;
     position: absolute;
     top: 20%;
     left:50%;
     transform: translate(-50%, 0);
-
 }
 
 #main-text h1{
@@ -83,18 +104,15 @@ list-style: none;
 }
 
 #main-content{
-    
     max-width: 60rem;
     margin: 0 auto;
 }
 
 
-
 #about-us{
-    height: 100vh;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 #about-us-text{
@@ -108,17 +126,16 @@ list-style: none;
 
 #about-us-text h1{
    color: #ffffff;
-    font-size: 3rem;
+   font-size: 3rem;
 }
 
 #about-us-text > * + * {
     margin-top: 2rem;
-  }
+}
 
 #about-us-text p{
     color: #ffffff;
     font-size: 1.4rem;
-   
 }
 
 
@@ -127,25 +144,21 @@ list-style: none;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  
     width: 50%;
 }
 
 #about-us-image img{
-   
     width: 100%;
 }
 
 #booking-btn{
     width: 50%;
     background-color: #fa823f;
-   
     padding: 1rem;
     border: none;
 }
 
-#booking-btn a {
-   
+#booking-btn a { 
     text-decoration: none;
     color:#ffffff;
 }
@@ -162,3 +175,18 @@ footer {
     font-size: 1rem;
     margin: 1rem 0;
 }
+
+@media (max-width: 768px) {
+    #toggle-menu{      
+      border: none;
+      background-color: #000000;
+      color:#ffffff;
+      display: block;
+      cursor: pointer;
+    }
+
+
+    .primary-nav-section{
+      display: none;
+    }
+  }
