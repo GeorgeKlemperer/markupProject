@@ -77,19 +77,27 @@ list-style: none;
     text-decoration: underline;
 }
 
+
 #main-jumbotron{
-    position: relative;
+   
+    position: relative;  
+   
 }
 
 #main-image {
+   
   width: 100vw;
-  height: 100vh;
   filter: brightness(40%);
 }
 
+#main-image > img {
+   
+    width: 100%;
+}
+
 #main-text{
-    width: 40rem;
-    height: 15rem;
+   
+   
     position: absolute;
     top: 20%;
     left:50%;
@@ -97,8 +105,8 @@ list-style: none;
 }
 
 #main-text h1{
-    font-size: 4rem;
-    text-align: center;
+    font-size: 5vw;
+    text-align:center;
     color:#fa823f;
     font-family: 'Permanent Marker', cursive;
 }
@@ -188,5 +196,10 @@ footer {
 
     .primary-nav-section{
       display: none;
+    }
+
+    #main-text h1{
+        
+      
     }
   }

@@ -1,6 +1,5 @@
 const toggleBar = document.querySelector('.fa-bars')
 const navSection = document.querySelector('.toogle-nav-section')
-
 const navLink = document.querySelectorAll('.toggle-nav-link')
 
 
@@ -17,11 +16,8 @@ const displayNav = () => {
     }else{
         navSection.style.height = '1px'   
     }
-
 }
 
 toggleBar.addEventListener("click", displayNav)
-
-
 
 
