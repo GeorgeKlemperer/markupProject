@@ -207,6 +207,15 @@ h2 {
   align-items: center;
 }
 
+.column {
+  display: flex;
+  /* gap: 1.5rem; */
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 .justify-space-between {
   justify-content: space-between;
 }
