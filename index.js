@@ -21,3 +21,19 @@ const displayNav = () => {
 toggleBar.addEventListener("click", displayNav)
 
 
+function getMiddle(s)
+
+{  const start= parseInt(s.length / 2)
+  if( s.length % 2 === 0){
+    console.log(s.slice(start-1, start+1))
+  }else{
+    console.log(s.slice(start, start+1))
+  }
+  
+}
+
+console.log(getMiddle("test"))
+console.log(getMiddle("testing")  ) //7 % 2 3..lkjl return index 3 
+
+
+
