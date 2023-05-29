@@ -126,6 +126,8 @@ body {
 
 #about-us-text > * + * {
   margin-top: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 #about-us-text h1 {
@@ -199,7 +201,7 @@ h2 {
 
 .row {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -221,7 +223,7 @@ button {
 }
 
 .info {
-  max-width: 13rem;
+  max-width: 12rem;
   max-height: 15rem;
   overflow-y: scroll;
 }
