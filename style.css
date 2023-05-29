@@ -105,7 +105,7 @@ body {
 }
 
 #main-content {
-  max-width: 60rem;
+  max-width: 67rem;
   margin: 0 auto;
 }
 
@@ -218,12 +218,18 @@ button {
   cursor: pointer;
 }
 
+.team-member {
+    border: #fa823f;
+    border-style: solid;
+    border-width: 0.2rem;
+}
+
 .team-member ul {
   padding-left: 1rem;
 }
 
 .info {
-  max-width: 12rem;
+  max-width: 15rem;
   max-height: 15rem;
   overflow-y: scroll;
 }
