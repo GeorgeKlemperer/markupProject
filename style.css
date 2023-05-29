@@ -55,8 +55,9 @@ body {
 }
 
 .togle-nav-section {
-  height: 1px;
-  transition: height 1s;
+ visibility: hidden;
+ height: 1px;
+ transition: height 1s;
 }
 
 .togle-nav-section ul > * + * {
