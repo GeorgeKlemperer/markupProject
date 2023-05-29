@@ -1,6 +1,7 @@
 const toggleBar = document.querySelector('.fa-bars')
 const navSection = document.querySelector('.togle-nav-section')
 const navLink = document.querySelectorAll('.toggle-nav-link')
+let w = window.innerWidth
 
 
 navLink.forEach( (link) => {
@@ -19,6 +20,19 @@ const displayNav = () => {
 }
 
 toggleBar.addEventListener("click", displayNav)
+window.addEventListener('resize', resizing)
+
+
+function resizing(){   
+    if(w > 768){
+        navSection.style.height = '1px'  
+    }
+}
+
+
+
+
+
 
 
 
