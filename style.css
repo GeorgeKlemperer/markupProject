@@ -141,6 +141,7 @@ body {
 }
 
 #booking-btn {
+  text-align: center;
   width: 70%;
   background-color: #fa823f;
   padding: 1rem;
@@ -150,7 +151,7 @@ body {
 #booking-btn a {
   font-size: 1.3rem;
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 
 #about-us-image {
@@ -377,6 +378,7 @@ footer {
   }
 
   #about-us {
+    height: auto;
     flex-wrap: nowrap;
     flex-direction: column;
   }
@@ -400,5 +402,8 @@ footer {
 
   #booking-btn {
     width: 100%;
+    text-align: center;
   }
+
+
 }
