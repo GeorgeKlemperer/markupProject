@@ -83,7 +83,7 @@ body {
 
 #main-image {
   width: 100vw;
-  filter: brightness(40%);
+  filter: brightness(60%);
 }
 
 #main-image > img {
@@ -167,6 +167,10 @@ h1 {
   font-size: 3rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 .center {
   max-width: 30rem;
   margin-left: auto;
@@ -174,7 +178,7 @@ h1 {
 }
 
 .width-lg {
-  max-width: 60rem;
+  max-width: 80rem;
 }
 
 .stack-sm > * + * {
@@ -193,19 +197,50 @@ h1 {
   margin-top: 4rem;
 }
 
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
 button {
   cursor: pointer;
 }
 
-#team-members .team-member img{
- height: 15rem;
- width: 15rem;
- object-fit: cover;
+.team-member ul {
+  padding-left: 1rem;
+}
+
+.info {
+  max-width: 13rem;
+  max-height: 15rem;
+  overflow-y: scroll;
+}
+
+#team-members .team-member img {
+  height: 15rem;
+  width: 15rem;
+  object-fit: cover;
 }
 /* End of CSS Primitives */
 
+#team-members {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+
 #contact-us {
-    margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 label,
@@ -311,6 +346,16 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  #main-text h1 {
+    font-size: 8vw;
+  }
+
+  #team-members {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
   #toggle-menu {
     border: none;
     background-color: #000000;
