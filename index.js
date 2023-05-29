@@ -1,5 +1,5 @@
 const toggleBar = document.querySelector('.fa-bars');
-const navSection = document.querySelector('.togle-nav-section');
+const navSection = document.querySelector('.toggle-nav-section');
 const navLink = document.querySelectorAll('.toggle-nav-link');
 let w = window.innerWidth;
 

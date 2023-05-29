@@ -54,13 +54,13 @@ body {
   display: none;
 }
 
-.togle-nav-section {
+.toggle-nav-section {
  visibility: hidden;
  height: 1px;
  transition: height 1s;
 }
 
-.togle-nav-section ul > * + * {
+.toggle-nav-section ul > * + * {
   margin-top: 1rem;
 }
 
