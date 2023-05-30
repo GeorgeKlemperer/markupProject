@@ -1,6 +1,7 @@
 const toggleBar = document.querySelector('.fa-bars')
-const navSection = document.querySelector('.toogle-nav-section')
+const navSection = document.querySelector('.togle-nav-section')
 const navLink = document.querySelectorAll('.toggle-nav-link')
+let w = window.innerWidth
 
 
 navLink.forEach( (link) => {
@@ -19,21 +20,22 @@ const displayNav = () => {
 }
 
 toggleBar.addEventListener("click", displayNav)
+window.addEventListener('resize', resizing)
 
 
-function getMiddle(s)
-
-{  const start= parseInt(s.length / 2)
-  if( s.length % 2 === 0){
-    console.log(s.slice(start-1, start+1))
-  }else{
-    console.log(s.slice(start, start+1))
-  }
-  
+function resizing(){   
+    if(w > 768){
+        navSection.style.height = '1px'  
+    }
 }
 
-console.log(getMiddle("test"))
-console.log(getMiddle("testing")  ) //7 % 2 3..lkjl return index 3 
+
+
+
+
+
+
+
 
 
 
