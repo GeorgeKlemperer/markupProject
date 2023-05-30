@@ -1,7 +1,6 @@
 # markupProject: Ghostbusters
-Agency web page
+A fictitous ghostbusters agency web page for paranormal investigators Eun, Hugh, and George.
 
 Authors:
-George Klemperer
+George Klemperer <br>
 Eunbyul Na
-
