@@ -234,7 +234,7 @@ button {
 .team-member {
     border: #fa823f;
     border-style: solid;
-    border-width: 0.2rem;
+    border-width: 0.3rem;
 }
 
 .team-member ul {
@@ -450,8 +450,6 @@ footer {
     height: auto;
     flex-wrap: nowrap;
     flex-direction: column;
-    text-align: justify;
-    text-justify: inter-word;
   }
 
   #about-us-image {
@@ -463,12 +461,13 @@ footer {
   }
 
   #about-us-text {
-    align-items: center;
+    /* align-items: center; */
     width: 100%;
   }
 
   #about-us-text p {
-    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   #booking-btn {
