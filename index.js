@@ -2,66 +2,38 @@ const toggleBar = document.querySelector('.fa-bars');
 const navSection = document.querySelector('.toggle-nav-section');
 const navLink = document.querySelectorAll('.toggle-nav-link');
 let w = window.innerWidth;
-
-const userName = document.querySelector('#user-name')
+const form = document.querySelector('#form');
 const modal = document.querySelector('#modal');
-const submitBtn = document.querySelector('#submit');
-const modalClose = document.querySelector('#modal-close')
-
-
-// let defaultContactMethod = 'email';
-
-// document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
-//   if (radio.checked) {
-//     defaultContactMethod = radio.value;
-//   }
-// });
-
-// submitBtn.addEventListener('click', function(e){
-//     const nameInput = document.querySelector('#name');
-//     const mailInput = document.querySelector('#email');
-//     const telInput = document.querySelector('#tel');
-//     const msgInput = document.querySelector('#msg');
-
-//     const marketingConsentInput = document.querySelector('#marketingConsent');
+const userName = document.querySelector('#user-name');
+const modalClose = document.querySelector('#modal-close');
 
 
 
-//     e.preventDefault();
-    
-//     if(!nameInput.value){
-//         modal.style.display = 'none'  
-//     }else{
-//         userName.innerHTML = nameInput.value;
-//         modal.style.display = 'block';
-//     }
-   
+form.addEventListener('submit', function(e){
+    const nameValue = document.querySelector('#name').value;
+    const inputs = document.querySelectorAll('input');
+    const textArea = document.querySelector('textarea');
+    const marketingConsentInput = document.querySelector('#marketingConsent');
 
-//     // Reset the form
-//     nameInput.value = '';
-//     mailInput.value = '';
-//     telInput.value = ''
-//      msgInput.value = ''
-//     marketingConsentInput.checked = false;
-//     document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
-//         radio.checked = (radio.value === defaultContactMethod);
-//       });
-   
-// })
+    e.preventDefault();
+    modal.style.display = 'block';
+    userName.innerHTML = nameValue;
+
+    inputs.forEach((input) => {
+        input.value = ''
+    })
+    textArea.value = ''
+    marketingConsentInput.checked = false; 
+})
 
 
 
-
-
-
-
-// modalClose.addEventListener('click', function(){
-//     modal.style.display = 'none'
-//     setTimeout(()=>{
-//         window.scrollTo(0,0)
-//     },300)
-   
-// })
+modalClose.addEventListener('click', function(){ 
+    modal.style.display = 'none'
+    setTimeout(()=>{
+        window.scrollTo(0,0)
+    },300)
+ })
 
 
 // nb. height and visibility used to display/hide navbar to enable smooth display animation.
