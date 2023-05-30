@@ -14,20 +14,24 @@ form.addEventListener('submit', function(e){
     const inputs = document.querySelectorAll('input');
     const textArea = document.querySelector('textarea');
     const marketingConsentInput = document.querySelector('#marketingConsent');
+    let radioEmail =  form.querySelectorAll('input[type="radio"][name="contact"]')[0]
 
+        
     e.preventDefault();
     modal.style.display = 'block';
     userName.innerHTML = nameValue;
 
+    //Reset input values 
     inputs.forEach((input) => {
         input.value = ''
     })
     textArea.value = ''
-    marketingConsentInput.checked = false; 
+    radioEmail.checked = true
+    marketingConsentInput.checked = false;   
 })
 
 
-
+//Modal popup close, and go to the top
 modalClose.addEventListener('click', function(){ 
     modal.style.display = 'none'
     setTimeout(()=>{
