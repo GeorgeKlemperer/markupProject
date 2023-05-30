@@ -389,15 +389,14 @@ form button:hover {
   background-color: #fa823f;
   position: absolute;
   top:30%;
-  left:15%;
-  width: 350px;
-  height: 200px;
+  left:50%;
+  transform: translate(-50%, 0);
+  width: 360px; 
   border: 1px solid #ffffff;
 }
 
 #modal-txt{
   margin-top: 20px;
- 
 }
 #modal h1 {
   font-size: 2rem;
@@ -476,6 +475,9 @@ footer {
     width: 100%;
     text-align: center;
   }
+
+
+
 
 
 }
