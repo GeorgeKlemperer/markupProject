@@ -94,4 +94,23 @@ function resizing(){
     }
 }
 
+// Sets scroll bar to the top when mouse leaves info section. addEventListener can only be applied to a individual element. So this for loop loops through each element with class name 'info' and attaches event listener.
+let teamMemberBox = document.getElementsByClassName('team-member');
+let infoBox = document.getElementsByClassName('info');
 
+for (let i = 0; i < infoBox.length; i++) {
+    teamMemberBox[i].addEventListener('mouseleave', function() {
+    infoBox[i].scrollTop = 0;
+    console.log("Scroll function working for element " + i);
+  });
+}
+
+// Scroll bar function for touchscreens (eg. phone)
+document.addEventListener('touchend', function(event) {
+    for (let i = 0; i < infoBox.length; i++) {
+      if (!teamMemberBox[i].contains(event.target)) {
+        infoBox[i].scrollTop = 0;
+        console.log("Scroll function working for element " + i);
+      }
+    }
+  });
