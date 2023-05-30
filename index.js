@@ -9,45 +9,45 @@ const submitBtn = document.querySelector('#submit');
 const modalClose = document.querySelector('#modal-close')
 
 
-let defaultContactMethod = 'email';
+// let defaultContactMethod = 'email';
 
-document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
-  if (radio.checked) {
-    defaultContactMethod = radio.value;
-  }
-});
+// document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
+//   if (radio.checked) {
+//     defaultContactMethod = radio.value;
+//   }
+// });
 
-submitBtn.addEventListener('click', function(e){
-    const nameInput = document.querySelector('#name');
-    const mailInput = document.querySelector('#email');
-    const telInput = document.querySelector('#tel');
-    const msgInput = document.querySelector('#msg');
+// submitBtn.addEventListener('click', function(e){
+//     const nameInput = document.querySelector('#name');
+//     const mailInput = document.querySelector('#email');
+//     const telInput = document.querySelector('#tel');
+//     const msgInput = document.querySelector('#msg');
 
-    const marketingConsentInput = document.querySelector('#marketingConsent');
+//     const marketingConsentInput = document.querySelector('#marketingConsent');
 
 
 
-    e.preventDefault();
+//     e.preventDefault();
     
-    if(!nameInput.value){
-        modal.style.display = 'none'  
-    }else{
-        userName.innerHTML = nameInput.value;
-        modal.style.display = 'block';
-    }
+//     if(!nameInput.value){
+//         modal.style.display = 'none'  
+//     }else{
+//         userName.innerHTML = nameInput.value;
+//         modal.style.display = 'block';
+//     }
    
 
-    // Reset the form
-    nameInput.value = '';
-    mailInput.value = '';
-    telInput.value = ''
-     msgInput.value = ''
-    marketingConsentInput.checked = false;
-    document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
-        radio.checked = (radio.value === defaultContactMethod);
-      });
+//     // Reset the form
+//     nameInput.value = '';
+//     mailInput.value = '';
+//     telInput.value = ''
+//      msgInput.value = ''
+//     marketingConsentInput.checked = false;
+//     document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
+//         radio.checked = (radio.value === defaultContactMethod);
+//       });
    
-})
+// })
 
 
 
@@ -55,13 +55,13 @@ submitBtn.addEventListener('click', function(e){
 
 
 
-modalClose.addEventListener('click', function(){
-    modal.style.display = 'none'
-    setTimeout(()=>{
-        window.scrollTo(0,0)
-    },300)
+// modalClose.addEventListener('click', function(){
+//     modal.style.display = 'none'
+//     setTimeout(()=>{
+//         window.scrollTo(0,0)
+//     },300)
    
-})
+// })
 
 
 // nb. height and visibility used to display/hide navbar to enable smooth display animation.
