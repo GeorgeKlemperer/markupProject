@@ -283,6 +283,8 @@ button {
 #contact-us {
   position: relative;
   margin-top: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 label,
