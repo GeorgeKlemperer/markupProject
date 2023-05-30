@@ -64,6 +64,7 @@ modalClose.addEventListener('click', function(){
 })
 
 
+// nb. height and visibility used to display/hide navbar to enable smooth display animation.
 navLink.forEach( (link) => {
     link.addEventListener("click", function(){
         navSection.style.visibility = "hidden";
