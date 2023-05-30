@@ -10,6 +10,19 @@ A fictitous ghostbusters agency web page for paranormal investigators Eun, Hugh,
 3. index.js - The JavaScript for the website.
 4. img - Directory containging all the images used in this repository.
 
+---
+## Acceptance criteria:
+
+- [x] Navigation menu.
+- [x] 'About us' section.
+- [x] Contact form.
+- [x] Form validation.
+- [x] Form submit button.
+- [x] Keyboard control navigation.
+- [x] Screen reader accessibility.
+
+---
+
 Authors: <br>
 George Klemperer <br>
 Eunbyul Na
