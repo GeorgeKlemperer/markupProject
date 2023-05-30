@@ -259,6 +259,7 @@ button {
 
 
 #contact-us {
+  position: relative;
   margin-top: 5rem;
 }
 
@@ -357,12 +358,47 @@ form button:hover {
   fill-opacity: 50%;
 }
 
+#modal {
+  display: none;
+  padding: 10px;
+  text-align: center;
+  background-color: #fa823f;
+  position: absolute;
+  top:30%;
+  left:15%;
+  width: 350px;
+  height: 200px;
+  border: 1px solid #ffffff;
+}
+
+#modal-txt{
+  margin-top: 20px;
+ 
+}
+#modal h1 {
+  font-size: 2rem;
+}
+
+#modal p {
+  font-size: 1.3rem;
+}
+
+#modal-close{
+  margin-top: 40px;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  color: black;
+}
+
 footer {
   color: #ffffff;
   text-align: center;
   font-size: 1rem;
   margin: 2rem 0 1rem 0;
 }
+
 
 @media (max-width: 768px) {
 

@@ -3,6 +3,66 @@ const navSection = document.querySelector('.toggle-nav-section');
 const navLink = document.querySelectorAll('.toggle-nav-link');
 let w = window.innerWidth;
 
+const userName = document.querySelector('#user-name')
+const modal = document.querySelector('#modal');
+const submitBtn = document.querySelector('#submit');
+const modalClose = document.querySelector('#modal-close')
+
+
+let defaultContactMethod = 'email';
+
+document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
+  if (radio.checked) {
+    defaultContactMethod = radio.value;
+  }
+});
+
+submitBtn.addEventListener('click', function(e){
+    const nameInput = document.querySelector('#name');
+    const mailInput = document.querySelector('#email');
+    const telInput = document.querySelector('#tel');
+    const msgInput = document.querySelector('#msg');
+
+    const marketingConsentInput = document.querySelector('#marketingConsent');
+
+
+
+    e.preventDefault();
+    
+    if(!nameInput.value){
+        modal.style.display = 'none'  
+    }else{
+        userName.innerHTML = nameInput.value;
+        modal.style.display = 'block';
+    }
+   
+
+    // Reset the form
+    nameInput.value = '';
+    mailInput.value = '';
+    telInput.value = ''
+     msgInput.value = ''
+    marketingConsentInput.checked = false;
+    document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
+        radio.checked = (radio.value === defaultContactMethod);
+      });
+   
+})
+
+
+
+
+
+
+
+modalClose.addEventListener('click', function(){
+    modal.style.display = 'none'
+    setTimeout(()=>{
+        window.scrollTo(0,0)
+    },300)
+   
+})
+
 
 navLink.forEach( (link) => {
     link.addEventListener("click", function(){

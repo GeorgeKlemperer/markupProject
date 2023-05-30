@@ -165,7 +165,7 @@
         <h1>Contact us</h1>
         <form id="form">
           <label for="name">Name</label>
-          <input id="name" name="name" type="text" />
+          <input id="name" name="name" type="text"/>
 
           <label for="email">Email</label>
           <input id="email" name="email" type="email" />
@@ -198,7 +198,7 @@
           </fieldset>
 
           <label for="message">Message</label>
-          <textarea name="message"></textarea>
+          <textarea name="message" id="msg"></textarea>
 
           <input
             id="marketingConsent"
@@ -206,17 +206,31 @@
             type="checkbox"
           />
           <label for="marketingConsent" class="checkbox"
-            >Sign up to weekly newsletter</label
-          >
+            >Sign up to weekly newsletter</label>
 
-          <button type="submit">Submit</button>
-        </form>
+          <button type="submit" id="submit">Submit</button>
+         </form>
+
+        <!--modal pop up start-->
+        <div id="modal">
+          <div id="modal-txt">
+            <h1>Hello, <span id="user-name"></span><h1>
+            <p>Thank you for reaching out to us!</p>
+          </div>
+          <button type="button" id="modal-close">Go back to homepage</button>
+        </div>
+        <!--modal pop up ends-->
+        
       </div>
     </section>
+
+   
 
     <footer>
       <p class="center">Who you gonna call? Ghostbusters Inc.</p>
     </footer>
+
+ 
 
     <script type="text/javascript" src="index.js"></script>
     <script src="https://use.fontawesome.com/8282ce4e26.js"></script>
