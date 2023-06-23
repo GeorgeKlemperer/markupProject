@@ -2,66 +2,42 @@ const toggleBar = document.querySelector('.fa-bars');
 const navSection = document.querySelector('.toggle-nav-section');
 const navLink = document.querySelectorAll('.toggle-nav-link');
 let w = window.innerWidth;
-
-const userName = document.querySelector('#user-name')
+const form = document.querySelector('#form');
 const modal = document.querySelector('#modal');
-const submitBtn = document.querySelector('#submit');
-const modalClose = document.querySelector('#modal-close')
+const userName = document.querySelector('#user-name');
+const modalClose = document.querySelector('#modal-close');
 
 
-let defaultContactMethod = 'email';
 
-document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
-  if (radio.checked) {
-    defaultContactMethod = radio.value;
-  }
-});
-
-submitBtn.addEventListener('click', function(e){
-    const nameInput = document.querySelector('#name');
-    const mailInput = document.querySelector('#email');
-    const telInput = document.querySelector('#tel');
-    const msgInput = document.querySelector('#msg');
-
+form.addEventListener('submit', function(e){
+    const nameValue = document.querySelector('#name').value;
+    const inputs = document.querySelectorAll('input');
+    const textArea = document.querySelector('textarea');
     const marketingConsentInput = document.querySelector('#marketingConsent');
+    let radioEmail =  form.querySelectorAll('input[type="radio"][name="contact"]')[0]
 
-
-
+        
     e.preventDefault();
-    
-    if(!nameInput.value){
-        modal.style.display = 'none'  
-    }else{
-        userName.innerHTML = nameInput.value;
-        modal.style.display = 'block';
-    }
-   
+    modal.style.display = 'block';
+    userName.innerHTML = nameValue;
 
-    // Reset the form
-    nameInput.value = '';
-    mailInput.value = '';
-    telInput.value = ''
-     msgInput.value = ''
-    marketingConsentInput.checked = false;
-    document.querySelectorAll('input[type="radio"][name="contact"]').forEach((radio) => {
-        radio.checked = (radio.value === defaultContactMethod);
-      });
-   
+    //Reset input values 
+    inputs.forEach((input) => {
+        input.value = ''
+    })
+    textArea.value = ''
+    radioEmail.checked = true
+    marketingConsentInput.checked = false;   
 })
 
 
-
-
-
-
-
-modalClose.addEventListener('click', function(){
+//Modal popup close, and go to the top
+modalClose.addEventListener('click', function(){ 
     modal.style.display = 'none'
     setTimeout(()=>{
         window.scrollTo(0,0)
     },300)
-   
-})
+ })
 
 
 // nb. height and visibility used to display/hide navbar to enable smooth display animation.
@@ -94,4 +70,23 @@ function resizing(){
     }
 }
 
+// Sets scroll bar to the top when mouse leaves info section. addEventListener can only be applied to a individual element. So this for loop loops through each element with class name 'info' and attaches event listener.
+let teamMemberBox = document.getElementsByClassName('team-member');
+let infoBox = document.getElementsByClassName('info');
 
+for (let i = 0; i < infoBox.length; i++) {
+    teamMemberBox[i].addEventListener('mouseleave', function() {
+    infoBox[i].scrollTop = 0;
+    console.log("Scroll function working for element " + i);
+  });
+}
+
+// Scroll bar function for touchscreens (eg. phone)
+document.addEventListener('touchend', function(event) {
+    for (let i = 0; i < infoBox.length; i++) {
+      if (!teamMemberBox[i].contains(event.target)) {
+        infoBox[i].scrollTop = 0;
+        console.log("Scroll function working for element " + i);
+      }
+    }
+  });
